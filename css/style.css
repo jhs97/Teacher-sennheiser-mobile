@@ -1,0 +1,235 @@
+@import url('reset.css');
+@import url(sub.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+:root {
+    --main-color : #0089CC;
+    --bg-color1 : #363636;
+    --bg-color2 : #000;
+    --text-color : #fff;
+    --header-height: 60px;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+}
+
+.btn-small, .btn-large {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+.btn-large {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 13px;
+}
+/* 선 스타일 버튼 */
+.btn-large.btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.container {
+    width: 100%;
+    padding-top: 25px;
+    /* padding-bottom: 50px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: 1px solid #ccc;
+}
+
+/* 메인 콘텐츠 공통부 하단 영역 여백 */
+.main .container {
+    padding-bottom: 100px;
+}
+
+.row {
+    display: flex;
+}
+
+#main-header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--main-color);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bi {
+    font-size: 24px;
+}
+
+#icon-menu a, #icon-menu button {
+    margin-left: 1em;
+    color: #fff;
+}
+#icon-menu button {
+    border-style: none;
+    background-color: transparent;
+    /* outline: 1px solid red; */
+    width: 30px;
+    height: 30px;
+}
+
+.bi-list {
+    font-size: 32px;
+}
+
+#icon-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* 타이틀 비주얼 */
+#home main {
+    background: #ccc;
+    height: calc(100vh - var(--header-height));
+    text-align: center;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 0px;
+
+    background-image: url(../images/main-titleBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center; /* 위에 플렉스디렉션을 칼럼으로 했기 때문 */
+}
+
+main h1 {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.btn-cta {
+    color: #000;
+    background: #fff;
+    width: 70%; 
+    font-size: 16px; 
+    padding: 5px 0px;
+    border-radius: 17px;
+}
+
+/* 카테고리 소세지 메뉴(스크롤 컨텐츠) */
+.category-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    outline: 1px solid #ccc;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: scroll; /* 클리핑 처리라고 보면 됨 */
+    margin-top: 20px;
+}
+.category-menu a {
+    white-space: nowrap; /*넘치는 텍스트같은 것을 밑으로 넘어가지않고 가려지도록 하는 효과*/
+    margin-right: 5px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* gnb toggle */
+#gnb {
+    /* display: none; */
+    background-color: #fff;
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition-duration: 0.4s;
+}
+#gnb.on {
+    transform: translateX(0%);
+}
+#gnb ul {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    font-size: 16px;
+    color: #000;
+}
+#gnb ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    
+}
+#gnb ul li a {
+    color: #000;
+    display: block;
+    padding: 10px 20px;
+    font-weight: 400;
+}
+
+#btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    width: 32px;
+    height: 32px;
+    font-size: 18.67px;
+    border-style: none;
+    background-color: transparent;
+    /* outline: 1px solid red; */
+}
+.bi-x-lg {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* footer */
+#main-footer {
+    background-color: var(--bg-color1);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 12px;
+}
+#main-footer a {
+    color: var(--text-color);
+}
+#main-footer .sns-link {
+    margin-bottom: 20px;
+}
+#main-footer .sns-link a {
+    margin-right: 1rem;
+}
+#main-footer .sns-link a:last-child {
+    margin-right: 0;
+  }
+#main-footer .footer-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+#main-footer .footer-menu strong {
+    font-weight: 500;
+}
+#main-footer .footer-menu span {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: 400;
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+

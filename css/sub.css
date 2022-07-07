@@ -1,0 +1,63 @@
+/* 서브페이지 css */
+
+/* products */
+#products .row {
+    flex-wrap: wrap;
+    /* 칼럼 사이의 여백 */
+    gap: 40px 10px; /* 수직 | 수평 gutter */
+}
+#products .product {
+    width: calc(50% - 5px); /* 큰틀에 gap을 줄 경우 안에 너비를 calc로 조절*/
+    /* background: #ccc; */
+}
+#products .product img {
+    width: 100%;
+    display: block;
+}
+#products main .container {
+    padding-top: 30px;
+}
+#products .product .info {
+    background-color: var(--bg-color2);
+    color: #fff;
+    margin-top: 5px;
+}
+#products .product .info .category {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+#products .product .info .title {
+    font-weight: 500;
+    font-size: 14px;
+}
+#products .product .info .price {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* detail(상세페이지) */
+#detail main figure img {
+    width: 100%;
+}
+
+/* 제목 하단 여백(공통) */
+#detail main header h1 {
+    margin-bottom: 20px;
+}
+#detail main header {
+    margin-bottom: 20px;
+}
+#detail main .container {
+    padding-top: 30px;
+    padding-bottom: 55px;
+}
+#detail main .buy-btn-group {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+}
+#detail main .buy-btn-group .btn-large {
+    width: 50%;
+}
