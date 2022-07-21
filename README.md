@@ -1,6 +1,8 @@
 # sennheiser-mobile
 mobile shop homepage
 
+demo :  https://jhs97.github.io/Teacher-sennheiser-mobile/
+
 
 1. 가변 타이틀 UI
 2. GNB toggle & animation
